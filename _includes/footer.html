@@ -1,0 +1,47 @@
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-sm-6 footer-links">
+          <h4>機能</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="{{ '/features/user.html' | relative_url }}">購入者</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{{ '/features/store.html' | relative_url }}">出品者</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{{ '/features/admin.html' | relative_url }}">管理者</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-6 footer-links">
+          <h4>サービス</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="{{ '/pricing.html' | relative_url }}">料金</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{{ '/news/' | relative_url }}">ニュース</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{{ site.url }}">運営会社</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{{ '/terms.html' | relative_url }}">利用規約</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{{ '/contact.html' | relative_url }}">お問い合わせ</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-6 footer-newsletter">
+          <h4>新着情報配信サービス</h4>
+          <p>最新ニュースをお届けします。</p>
+          <form action="{{ site.subscribe_url }}" method="post" class="php-email-form">
+            <input type="email" name="email" data-rule="email"><input type="submit" value="登録">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container d-md-flex py-4">
+    <div class="me-md-auto text-center text-md-start">
+      &copy; Copyright <strong><span>{{ site.title }}</span></strong>. All Rights Reserved
+    </div>
+  </div>
+</footer>
+
+<div id="preloader"></div>
+<a href="#" class="back-to-top"><i class="bi bi-arrow-up-short"></i></a>
+
+<script src="{{ '/assets/lib/purecounter/purecounter.js' | relative_url }}"></script>
+<script src="{{ '/assets/lib/aos/aos.js' | relative_url }}"></script>
+<script src="{{ '/assets/lib/bootstrap/js/bootstrap.bundle.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/lib/swiper/swiper-bundle.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/main.js' | relative_url }}"></script>

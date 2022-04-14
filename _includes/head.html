@@ -1,0 +1,64 @@
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T572HM2');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% assign url = page.url | replace:'index.html','' | absolute_url -%}
+  {%- assign img = '/assets/img/logo.png' | absolute_url -%}
+  {%- assign name = site.title | escape -%}
+  {%- capture title -%}{{ name }}{% if page.title %} | {{ page.title | escape }}{% endif %}{%- endcapture -%}
+  {%- capture description -%}
+  {%- if page.excerpt -%}
+  {{- page.excerpt | strip_html | strip_newlines | truncate: 160 -}}
+  {%- else -%}
+  {{- site.description | strip_newlines -}}
+  {%- endif -%}
+  {%- endcapture -%}
+  {%- capture keywords -%}
+  {{- site.keywords | replace: ", ", "," -}}
+  {%- if page.keywords -%}
+  ,{{- page.keywords | replace: ", ", "," -}}
+  {%- endif -%}
+  {%- endcapture -%}
+  {%- capture uniqueKeywords -%}
+  {{- keywords | split: "," | uniq | join: "," -}}
+  {%- endcapture -%}
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="keywords" content="{{ uniqueKeywords }}">
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="{{ img }}"/>
+  <meta property="og:url" content="{{ url }}"/>
+  <meta property="og:site_name" content="{{ name }}"/>
+  <meta property="og:title" content="{{ title }}"/>
+  <meta property="og:description" content="{{ description }}"/>
+  <meta property="twitter:card" content="summary_large_image"/>
+  <meta property="twitter:url" content="{{ url }}"/>
+  <meta property="twitter:image" content="{{ img }}"/>
+  <meta property="twitter:title" content="{{ title }}"/>
+  <meta property="twitter:description" content="{{ description }}"/>
+
+  <link href="{{ '/assets/img/favicon.ico' | relative_url }}" type="image/x-icon" rel="icon">
+  <link href="{{ '/assets/img/favicon.ico' | relative_url }}" type="image/x-icon" rel="shortcut icon">
+  <link href="{{ '/assets/img/apple-icon.png' | relative_url }}" type="image/png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ '/assets/lib/animate.css/animate.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/lib/aos/aos.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/lib/bootstrap/css/bootstrap.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/lib/bootstrap-icons/bootstrap-icons.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/lib/boxicons/css/boxicons.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/lib/remixicon/remixicon.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/lib/swiper/swiper-bundle.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+  <link rel="canonical" href="{{ url }}">
+</head>

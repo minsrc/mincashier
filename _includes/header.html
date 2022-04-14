@@ -1,0 +1,16 @@
+<header id="header" class="fixed-top">
+  <div class="container d-flex align-items-center justify-content-between">
+    <a href="{{ '/' | relative_url }}" class="logo me-auto"><img src="{{ '/assets/img/logo.png' | relative_url }}" alt="" class="img-fluid"></a>
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+        <li {% if page.menu == "home" %}class="active"{% endif %}><a href="{{ '/' | relative_url }}">ホーム</a></li>
+        <li {% if page.menu == "features" %}class="active"{% endif %}><a href="{{ '/features.html' | relative_url }}">機能</a></li>
+        <li {% if page.menu == "pricing" %}class="active"{% endif %}><a href="{{ '/pricing.html' | relative_url }}">料金</a></li>
+        <li {% if page.menu == "news" %}class="active"{% endif %}><a href="{{ '/news/' | relative_url }}">ニュース</a></li>
+        <li {% if page.menu == "contact" %}class="active"{% endif %}><a href="{{ '/contact.html' | relative_url }}">お問い合わせ</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+    <a href="{{ '/download.html' | relative_url }}" class="get-started-btn">ダウンロード</a>
+  </div>
+</header>
